@@ -1,4 +1,4 @@
---drop table if exists t42;
+drop table if exists t42;
 go
 create table t42(c1 int primary key, c2 varchar(32));
 go
