@@ -11,7 +11,7 @@ pool:
   vmImage: windows-latest
 
 stages:
-- stage: TF_VALIDATE
+- stage: TF_DEPLOY
   jobs:
   - job:
     steps:
@@ -57,6 +57,11 @@ stages:
         deployType: 'SqlTask'
         SqlFile: 'dba42.sql'
         IpDetectionMethod: 'AutoDetect'
+
+- stage: TF_DECOMMISSION
+  jobs:
+  - job:
+    steps:
 
     - task: TerraformTaskV3@3
       displayName: 'Terraform Decommission'
