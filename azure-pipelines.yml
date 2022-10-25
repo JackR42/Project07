@@ -27,8 +27,8 @@ stages:
         command: 'init'
         backendServiceArm: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
         backendAzureRmResourceGroupName: 'S2-RG-CORE'
-        backendAzureRmStorageAccountName: 's2rgcoresa20221026'
-        backendAzureRmContainerName: 's2rgcont20221026'
+        backendAzureRmStorageAccountName: 's2rgcorestorageaccount'
+        backendAzureRmContainerName: 's2-rg-core-sa-container-project07'
         backendAzureRmKey: 'main.tf'
 
     - task: TerraformTaskV3@3
@@ -74,8 +74,8 @@ stages:
         command: 'init'
         backendServiceArm: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
         backendAzureRmResourceGroupName: 'S2-RG-CORE'
-        backendAzureRmStorageAccountName: 's2rgcoresa20221026'
-        backendAzureRmContainerName: 's2rgcont20221026'
+        backendAzureRmStorageAccountName: 's2rgcorestorageaccount'
+        backendAzureRmContainerName: 's2-rg-core-sa-container-project07'
         backendAzureRmKey: 'main.tf'
 
     - task: TerraformTaskV3@3
