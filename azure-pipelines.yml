@@ -4,8 +4,8 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- main
+#trigger:
+#- main
 
 pool:
   vmImage: windows-latest
@@ -62,6 +62,11 @@ stages:
   jobs:
   - job:
     steps:
+    - task: TerraformInstaller@0
+      displayName: 'Terraform Install'
+      inputs:
+        terraformVersion: 'latest'
+
     - task: TerraformTaskV3@3
       displayName: 'Terraform Init'
       inputs:
