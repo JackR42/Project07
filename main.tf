@@ -19,3 +19,4 @@ resource "azurerm_mssql_server" "project07" {
   administrator_login          = "admindba"
   administrator_login_password = "ABCabc123.42"
 }
+
