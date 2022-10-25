@@ -31,6 +31,12 @@ steps:
     backendAzureRmKey: 'main.tf'
   
 - task: TerraformTaskV3@3
+  displayName: 'Terraform Plan'
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
+- task: TerraformTaskV3@3
   displayName: 'Terraform Deploy'
   inputs:
     provider: 'azurerm'
