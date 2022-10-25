@@ -55,3 +55,10 @@ steps:
     deployType: 'SqlTask'
     SqlFile: 'dba42.sql'
     IpDetectionMethod: 'AutoDetect'
+
+- task: TerraformTaskV3@3
+  displayName: 'Terraform Decommission'
+  inputs:
+    provider: 'azurerm'
+    command: 'destroy'
+    environmentServiceNameAzureRM: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
