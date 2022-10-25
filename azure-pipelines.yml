@@ -15,12 +15,12 @@ steps:
   displayName: 'Run a one-line script'
 
 - task: TerraformInstaller@0
-  displayName: 'Installing Terraform'
+  displayName: 'Terraform Install'
   inputs:
     terraformVersion: 'latest'
 
 - task: TerraformTaskV3@3
-  displayName: 'Intializing Terraform'
+  displayName: 'Terraform Init'
   inputs:
     provider: 'azurerm'
     command: 'init'
@@ -30,4 +30,9 @@ steps:
     backendAzureRmContainerName: 'containersaproject07020221025'
     backendAzureRmKey: 'main.tf'
   
-  
+  - task: TerraformTaskV3@3
+  displayName: 'Terraform Deploy'
+    inputs:
+      provider: 'azurerm'
+      command: 'apply'
+      environmentServiceNameAzureRM: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
