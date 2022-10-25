@@ -21,21 +21,21 @@ steps:
 
 - task: TerraformTaskV3@3
   displayName: 'Terraform Init'
-  inputs:
-    provider: 'azurerm'
-    command: 'init'
-    backendServiceArm: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
-    backendAzureRmResourceGroupName: 'S2-RG-Core-Project07'
-    backendAzureRmStorageAccountName: 'saproject07020221025'
-    backendAzureRmContainerName: 'containersaproject07020221025'
-    backendAzureRmKey: 'main.tf'
-  
+   inputs:
+     provider: 'azurerm'
+     command: 'init'
+     backendServiceArm: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
+     backendAzureRmResourceGroupName: 'S2-RG-CORE'
+     backendAzureRmStorageAccountName: 's2rgcoresa20221026'
+     backendAzureRmContainerName: 's2rgcont20221026'
+     backendAzureRmKey: 'main.tf'
 - task: TerraformTaskV3@3
   displayName: 'Terraform Plan'
   inputs:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'S2-Visual Studio Ultimate with MSDN(e442b2de-cb70-403f-ac05-5f1d661fb7fa)'
+
 - task: TerraformTaskV3@3
   displayName: 'Terraform Deploy'
   inputs:
