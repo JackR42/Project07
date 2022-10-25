@@ -31,7 +31,7 @@ steps:
     backendAzureRmKey: 'main.tf'
   
   - task: TerraformTaskV3@3
-  displayName: 'Terraform Deploy'
+    displayName: 'Terraform Deploy'
     inputs:
       provider: 'azurerm'
       command: 'apply'
